@@ -2,6 +2,8 @@ import React from "react";
 import { View, Text, SafeAreaView, StyleSheet, Button } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
+// Copyright 2022 Haziq Haiqal
+
 function HomeScreen() {
   const navigation = useNavigation();
 
