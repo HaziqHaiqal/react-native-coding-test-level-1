@@ -10,6 +10,7 @@ import {
   Button,
   Alert,
 } from "react-native";
+import Spacer from "../components/Spacer";
 import DateTimePicker from "@react-native-community/datetimepicker";
 
 function ContactScreen() {
@@ -94,10 +95,18 @@ function ContactScreen() {
   return (
     <SafeAreaView style={Styles.container}>
       <View style={Styles.detailsContainer}>
-        <Text>Get In Touch with Us !</Text>
+        <Text
+          style={{
+            fontSize: 20,
+            letterSpacing: 1,
+          }}
+        >
+          Get In Touch with Us !
+        </Text>
+
+          <Spacer height={30}/>
         <View style={Styles.fieldContainer}>
           <Text>Fullname</Text>
-
           <TextInput
             style={Styles.input}
             onChangeText={(name) => onChangeFieldTextValue("userName", name)}
@@ -110,7 +119,6 @@ function ContactScreen() {
 
         <View style={Styles.fieldContainer}>
           <Text>Email</Text>
-
           <TextInput
             style={Styles.input}
             onChangeText={(email) => onChangeFieldTextValue("userEmail", email)}
@@ -173,8 +181,8 @@ const Styles = StyleSheet.create({
     // borderColor: "blue",
     // borderWidth: 2,
     // marginBottom: 5,
-    alignSelf: "flex-end",
-    width: "100%",
+    alignSelf: "center",
+    width: "75%",
   },
   input: {
     height: 40,
@@ -186,6 +194,7 @@ const Styles = StyleSheet.create({
   },
   datePicker: {
     justifyContent: "center",
+    // alignItems: "center",
     // backgroundColor: "red",
   },
   button: {
